@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label style="margin-left: 250px;">TABAN ÜCRET</label>
+    <br>
+    <label >ad</label>
+    <input type="text">
+    <input type="text" id="taban" style="margin-left: 40px;">
+   
+    <br>
+    <br>
+    <label >soyad</label>
+    <input type="text">
+    <input type="radio" id="evli" style="margin-left: 40px; ">EVLİ
+    <br>
+    <input type="radio" id="bekar" style="margin-left: 265px;">BEKAR
+     <button type="button" style="margin-left: 40px;" onclick=hesapla()>HESAPLA</button>
+    <br>
+    <br>
+    <input type="checkbox" id="lisans">lisans
+    <label style="margin-left: 40px; " id="kademe">Kademe</label>
+    <select name="Kademe" size="1">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        </select>
+
+
+    <script>
+        
+        
+        function hesapla()
+        {
+
+        var taban=document.getElementById(taban).value;
+        var evli=document.getElementById(evli).Checked;
+        var bekar=document.getElementById(bekar).Checked;
+        var lisans=document.getElementById(lisans).Checked;
+        var kademe=document.getElementById(kademe).value;
+        if (lisans==true)
+        {
+            if(evli==true)
+            {
+                var toplam=taban*kademe+300;
+            }
+            else
+            {
+                var toplam=taban*kademe;
+            }
+        }
+        else
+        {
+           if(evli==true)
+           {
+           var toplam=taban*kademe
+           }
+           else
+           {
+           var toplam=700;
+           }
+        }
+        window.alert(toplam);
+        
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   
+        <label >Kullanıcı Adı:</label>
+        <input type="text" id="ad"> <br>
+        <label >Şifre:</label>
+        <input type="text" id="şifre"><br>
+        <button type="button" onclick="giris()">Giriş</button>
+        <button type="button" onclick="unuttum()">Şifremi Unuttum</button>
+  
+    <script>
+        function unuttum() {
+            alert("Kullanıcı adı: admin, şifre: 1234");
+        }
+        function giris() {
+            var ad = document.getElementById("ad").value;
+            var şifre = document.getElementById("şifre").value;
+            if (ad == "admin" && şifre == "1234") {
+                alert("Giriş Başarılı!");
+                window.location.href = "bb.html"; 
+            } else {
+                alert("Kullanıcı adı veya şifre yanlış!");
+            }
+        }
+    </script>
+</body>
+</html>
